@@ -1,40 +1,55 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
+// Ensure this image exists in your public/images folder
 import HeroImage from "../public/images/im2.jpg";
-export function Hero() {
+
+export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-[600px] md:min-h-[700px] flex items-center"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Background Image with Overlay */}
+      {/* Optimized Background Image */}
       <div className="absolute inset-0 -z-10">
-        <img
+        <Image
           src={HeroImage}
           alt="Azienda Agricola Serrea - Italian farm in Basilio"
-          className="w-full h-full object-cover opacity-40 dark:opacity-30"
+          fill
+          priority
+          className="object-cover opacity-60 transition-transform duration-[10s] ease-smooth hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
+        {/* Modern Organic Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-serrea-cream/20 via-serrea-cream/40 to-serrea-cream" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance mb-6 animate-fade-in text-center">
-            Azienda Agricola Serrea – Fresh & Organic Italian Farming
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-serrea-green leading-[1.1] mb-8 tracking-tight">
+            Azienda Agricola <br />
+            <span className="text-serrea-leaf">Serrea</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty mb-8 animate-fade-in-delay text-center">
+
+          <p className="text-lg md:text-xl text-serrea-green/80 leading-relaxed max-w-2xl mx-auto mb-10 font-sans">
             Experience authentic Italian farming in the heart of Basilio. Our
-            family-owned farm has been cultivating premium organic crops for
-            generations, combining traditional methods with sustainable
-            practices to bring you the finest agricultural products.
+            family-owned farm combines traditional methods with sustainable
+            practices to bring you the finest organic products.
           </p>
-          <div className="flex flex-wrap gap-4 animate-fade-in-delay-2 justify-center">
+
+          <div className="flex flex-wrap gap-6 justify-center">
             <Link
               href="#about"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity "
+              className="group inline-flex items-center gap-3 bg-serrea-green text-serrea-cream px-8 py-4 rounded-full font-medium transition-all duration-500 ease-smooth hover:bg-serrea-leaf hover:shadow-xl"
             >
               Learn More
-              <FiArrowRight className="w-5 h-5" />
+              <FiArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" />
+            </Link>
+
+            <Link
+              href="#products"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium border border-serrea-green text-serrea-green hover:bg-serrea-green/5 transition-all duration-500"
+            >
+              Our Products
             </Link>
           </div>
         </div>

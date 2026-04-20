@@ -3,12 +3,12 @@ export function Products() {
     {
       name: "Organic Tomatoes",
       description: "Vine-ripened, juicy tomatoes bursting with flavor",
-      image: "/fresh-organic-red-tomatoes.jpg",
+      image: "/images/im1.jpg",
     },
     {
       name: "Fresh Lettuce Mix",
       description: "Crisp mixed greens perfect for salads",
-      image: "/fresh-green-lettuce-leaves.jpg",
+      image: "/images/im2.jpg",
     },
     {
       name: "Sweet Corn",
@@ -30,16 +30,19 @@ export function Products() {
       description: "Aromatic herbs including basil, parsley, and cilantro",
       image: "/fresh-green-herbs-bundle.jpg",
     },
-  ]
+  ];
 
   return (
     <section id="products" className="py-16 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Our Fresh Crops</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+            Our Fresh Crops
+          </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            Discover our selection of premium organic produce, harvested daily using traditional Italian farming methods
-            to ensure maximum freshness and nutritional value.
+            Discover our selection of premium organic produce, harvested daily
+            using traditional Italian farming methods to ensure maximum
+            freshness and nutritional value.
           </p>
         </div>
 
@@ -58,13 +61,17 @@ export function Products() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-card-foreground mb-2">{product.name}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
+                <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                  {product.name}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {product.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
