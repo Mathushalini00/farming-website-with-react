@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-serrea-green/80 leading-relaxed max-w-2xl mx-auto mb-10 font-sans">
-            Experience authentic Italian farming in the heart of Basilio. Our
+            Experience authentic Italian farming in the heart of Basilico. Our
             family-owned farm combines traditional methods with sustainable
             practices to bring you the finest organic products.
           </p>
