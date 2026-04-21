@@ -6,7 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 
-// Fonts: Playfair for a premium Italian feel, Inter for clean UI
+// Elegant fonts for a premium Italian brand
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -18,33 +18,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Azienda Agricola Serrea | Fresh & Organic Italian Farming",
+  // CRITICAL: Leading with the brand name for #1 search ranking
+  title: {
+    default: "Azienda Agricola Serrea | Official Website",
+    template: "%s | Azienda Agricola Serrea",
+  },
   description:
-    "Azienda Agricola Serrea - Italian family farm delivering premium organic crops and agricultural products using sustainable methods in Basilio.",
+    "Official website of Azienda Agricola Serrea. Premium organic Italian farming in Basilio, specializing in traditional basil cultivation and sustainable products.",
   keywords: [
-    "italian farming",
-    "organic farming",
-    "basilico biologico",
-    "azienda agricola Basilio",
-    "sustainable agriculture",
+    "Azienda Agricola Serrea",
+    "Serrea Basilio",
+    "Organic Italian Farm",
+    "Basilico Biologico",
+    "Sustainable Agriculture Italy",
+    "Italian Farm Fresh Produce",
   ],
-  metadataBase: new URL("https://serreafarm.it"), // Replace with your actual domain
-  // LOGO & FAVICON CONFIGURATION
+  // Replace with your actual deployed domain for canonical SEO
+  metadataBase: new URL("https://www.serreafarm.it"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/images/azserrea.png",
-    shortcut: "/images/azserrea.png",
     apple: "/images/azserrea.png",
   },
-  // SOCIAL MEDIA PREVIEW (OpenGraph)
   openGraph: {
-    title: "Azienda Agricola Serrea - Tradizione e Qualità",
-    description:
-      "Experience authentic Italian farming and premium organic products.",
-    url: "https://serreafarm.it",
+    title: "Azienda Agricola Serrea | Official Website",
+    description: "Premium Organic Italian Farming & Traditional Heritage.",
+    url: "https://www.serreafarm.it",
     siteName: "Azienda Agricola Serrea",
     images: [
       {
-        url: "/images/azserrea.png",
+        url: "/images/azserrea.png", // Your logo appears when shared
         width: 1200,
         height: 630,
         alt: "Azienda Agricola Serrea Logo",
@@ -52,6 +57,17 @@ export const metadata: Metadata = {
     ],
     locale: "it_IT",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -63,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning className="scroll-smooth">
       <head>
-        {/* SEO: JSON-LD Structured Data */}
+        {/* JSON-LD Structured Data: Tells Google this is a verified business Entity */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -71,9 +87,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "AgricultureService",
               name: "Azienda Agricola Serrea",
+              alternateName: "Serrea Farm",
+              url: "https://www.serreafarm.it",
+              logo: "https://www.serreafarm.it/images/azserrea.png",
+              image: "https://www.serreafarm.it/images/azserrea.png",
               description:
-                "Premium organic Italian farm specializing in traditional agricultural methods.",
-              image: "https://serreafarm.it/images/azserrea.png",
+                "Traditional Italian family farm specializing in organic basil and sustainable crops.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Via Agricola 123",
@@ -82,9 +101,28 @@ export default function RootLayout({
                 postalCode: "12345",
                 addressCountry: "IT",
               },
-              telephone: "+39-123-456-7890",
-              url: "https://serreafarm.it",
-              priceRange: "$$",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 44.4056, // Example: Update with your exact coordinates
+                longitude: 8.9463,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                ],
+                opens: "08:00",
+                closes: "18:00",
+              },
+              sameAs: [
+                "https://www.instagram.com/aziendaagricolaserrea", // Replace with actual links
+                "https://www.facebook.com/aziendaagricolaserrea",
+              ],
             }),
           }}
         />
@@ -92,39 +130,81 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-serrea-cream text-serrea-green min-h-screen flex flex-col`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {/* The Navbar now sits at the top of every page */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+        >
+          {/* Universal Navbar */}
           <Navbar />
 
           <main className="flex-grow">{children}</main>
 
-          {/* Simple Footer for SEO & Navigation */}
-          <footer className="bg-[#1f3400] text-white py-12 px-4 border-t border-white/10">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-              <div>
-                <h3 className="font-serif text-xl mb-4 text-serrea-gold">
-                  Serrea
+          {/* Footer with NAP (Name, Address, Phone) for Local SEO */}
+          <footer className="bg-[#1f3400] text-white py-16 px-6 border-t border-white/10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+              <div className="md:col-span-2">
+                <h3 className="font-serif text-2xl mb-6 text-serrea-gold">
+                  Azienda Agricola Serrea
                 </h3>
-                <p className="text-sm opacity-80 leading-relaxed">
-                  Coltiviamo passione e tradizione nel cuore di Basilio dal
-                  1920.
+                <p className="text-sm opacity-70 leading-relaxed max-w-sm mx-auto md:mx-0">
+                  Preserving the legacy of Italian agriculture through
+                  sustainable organic farming and the world-renowned aroma of
+                  Basilio basil.
                 </p>
               </div>
               <div>
-                <h4 className="font-bold mb-4">Contatti</h4>
-                <p className="text-sm opacity-80">
-                  Via Agricola 123, Basilio (IT)
-                </p>
-                <p className="text-sm opacity-80">info@serreafarm.it</p>
+                <h4 className="font-bold text-serrea-gold mb-6 uppercase tracking-widest text-xs">
+                  Navigation
+                </h4>
+                <ul className="space-y-3 text-sm opacity-80">
+                  <li>
+                    <a
+                      href="#home"
+                      className="hover:text-serrea-gold transition-colors"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#about"
+                      className="hover:text-serrea-gold transition-colors"
+                    >
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#products"
+                      className="hover:text-serrea-gold transition-colors"
+                    >
+                      Products
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#contact"
+                      className="hover:text-serrea-gold transition-colors"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
               </div>
               <div>
-                <h4 className="font-bold mb-4">Orari</h4>
-                <p className="text-sm opacity-80">Lun - Sab: 08:00 - 18:00</p>
-                <p className="text-sm opacity-80">Domenica: Chiuso</p>
+                <h4 className="font-bold text-serrea-gold mb-6 uppercase tracking-widest text-xs">
+                  Contact Us
+                </h4>
+                <address className="not-italic text-sm opacity-80 space-y-3">
+                  <p>Via Agricola 123, Basilico (IT)</p>
+                  <p>+39 123 456 7890</p>
+                  <p>info@serreafarm.it</p>
+                </address>
               </div>
             </div>
-            <div className="mt-12 pt-8 border-t border-white/5 text-center text-xs opacity-50">
-              © 2026 Azienda Agricola Serrea. All rights reserved.
+            <div className="mt-16 pt-8 border-t border-white/5 text-center text-[10px] uppercase tracking-[0.2em] opacity-40">
+              © 2026 Azienda Agricola Serrea | P.IVA 0123456789
             </div>
           </footer>
         </ThemeProvider>
