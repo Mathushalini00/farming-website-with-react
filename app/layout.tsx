@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     "Official website of Azienda Agricola Serrea. Premium organic Italian farming in Basilio, specializing in traditional basil cultivation and sustainable products.",
   keywords: [
     "Azienda Agricola Serrea",
-    "Serrea Basilio",
+    "Serrea Basilico",
+    "Agricola Serrea",
+    "basilico italiano",
+    "basilico genova",
+    "Serrea Farm",
     "Organic Italian Farm",
     "Basilico Biologico",
     "Sustainable Agriculture Italy",
@@ -87,7 +91,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "AgricultureService",
               name: "Azienda Agricola Serrea",
-              alternateName: "Serrea Farm",
+              alternateName: "Serrea basilico",
               url: "https://www.serreafarm.it",
               logo: "https://www.serreafarm.it/images/azserrea.png",
               image: "https://www.serreafarm.it/images/azserrea.png",
@@ -95,8 +99,8 @@ export default function RootLayout({
                 "Traditional Italian family farm specializing in organic basil and sustainable crops.",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Via Agricola 123",
-                addressLocality: "Basilio",
+                streetAddress: "Via Agricola 16",
+                addressLocality: "Basilico",
                 addressRegion: "IT",
                 postalCode: "12345",
                 addressCountry: "IT",
@@ -150,7 +154,7 @@ export default function RootLayout({
                 <p className="text-sm opacity-70 leading-relaxed max-w-sm mx-auto md:mx-0">
                   Preserving the legacy of Italian agriculture through
                   sustainable organic farming and the world-renowned aroma of
-                  Basilio basil.
+                  Basilico basil.
                 </p>
               </div>
               <div>
@@ -197,7 +201,7 @@ export default function RootLayout({
                   Contact Us
                 </h4>
                 <address className="not-italic text-sm opacity-80 space-y-3">
-                  <p>Via Agricola 123, Basilico (IT)</p>
+                  <p>Via serrea 15, 16158 genova</p>
                   <p>+39 123 456 7890</p>
                   <p>info@serreafarm.it</p>
                 </address>
