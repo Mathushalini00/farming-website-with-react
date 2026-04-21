@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src={HeroImage}
-          alt="Azienda Agricola Serrea - Italian farm in Basilio"
+          alt="Azienda Agricola Serrea - Italian farm in Basilico"
           fill
           priority
           className="object-cover opacity-60 transition-transform duration-[10s] ease-smooth hover:scale-110"
