@@ -6,7 +6,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 
-// Elegant fonts for a premium Italian brand
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -18,26 +17,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  // CRITICAL: Leading with the brand name for #1 search ranking
   title: {
-    default: "Azienda Agricola Serrea | Official Website",
+    default: "Azienda Agricola Serrea | Basilico Genovese e Prodotti Tipici",
     template: "%s | Azienda Agricola Serrea",
   },
   description:
-    "Official website of Azienda Agricola Serrea. Premium organic Italian farming in Basilio, specializing in traditional basil cultivation and sustainable products.",
+    "Sito ufficiale dell'Azienda Agricola Serrea a Genova. Eccellenza nella produzione di basilico genovese biologico e agricoltura sostenibile in Liguria.",
   keywords: [
     "Azienda Agricola Serrea",
-    "Serrea Basilico",
-    "Agricola Serrea",
-    "basilico italiano",
-    "basilico genova",
-    "Serrea Farm",
-    "Organic Italian Farm",
-    "Basilico Biologico",
-    "Sustainable Agriculture Italy",
-    "Italian Farm Fresh Produce",
+    "Serrea Basilico Genova",
+    "Basilico Genovese",
+    "Agricoltura Biologica Liguria",
+    "Prodotti tipici liguri",
+    "Organic Farm Genova",
+    "Serrea Farm Italy",
   ],
-  // Replace with your actual deployed domain for canonical SEO
   metadataBase: new URL("https://www.serreafarm.it"),
   alternates: {
     canonical: "/",
@@ -47,16 +41,17 @@ export const metadata: Metadata = {
     apple: "/images/azserrea.png",
   },
   openGraph: {
-    title: "Azienda Agricola Serrea | Official Website",
-    description: "Premium Organic Italian Farming & Traditional Heritage.",
+    title: "Azienda Agricola Serrea | Eccellenza Ligure",
+    description:
+      "Produzione tradizionale di basilico e agricoltura biologica a Genova.",
     url: "https://www.serreafarm.it",
     siteName: "Azienda Agricola Serrea",
     images: [
       {
-        url: "/images/azserrea.png", // Your logo appears when shared
+        url: "/images/azserrea.png",
         width: 1200,
         height: 630,
-        alt: "Azienda Agricola Serrea Logo",
+        alt: "Logo Azienda Agricola Serrea",
       },
     ],
     locale: "it_IT",
@@ -83,32 +78,32 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning className="scroll-smooth">
       <head>
-        {/* JSON-LD Structured Data: Tells Google this is a verified business Entity */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AgricultureService",
+              "@id": "https://www.serreafarm.it/#organization",
               name: "Azienda Agricola Serrea",
-              alternateName: "Serrea basilico",
+              alternateName: "Serrea Basilico Genova",
               url: "https://www.serreafarm.it",
               logo: "https://www.serreafarm.it/images/azserrea.png",
               image: "https://www.serreafarm.it/images/azserrea.png",
               description:
-                "Traditional Italian family farm specializing in organic basil and sustainable crops.",
+                "Azienda agricola specializzata nella produzione di Basilico Genovese e colture sostenibili a Genova.",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Via Agricola 16",
-                addressLocality: "Basilico",
-                addressRegion: "IT",
-                postalCode: "12345",
+                streetAddress: "Via Serrea 15",
+                addressLocality: "Genova",
+                addressRegion: "GE",
+                postalCode: "16158",
                 addressCountry: "IT",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 44.4056, // Example: Update with your exact coordinates
-                longitude: 8.9463,
+                latitude: 44.437,
+                longitude: 8.765,
               },
               openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
@@ -124,7 +119,7 @@ export default function RootLayout({
                 closes: "18:00",
               },
               sameAs: [
-                "https://www.instagram.com/aziendaagricolaserrea", // Replace with actual links
+                "https://www.instagram.com/aziendaagricolaserrea",
                 "https://www.facebook.com/aziendaagricolaserrea",
               ],
             }),
@@ -139,12 +134,10 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
         >
-          {/* Universal Navbar */}
           <Navbar />
 
           <main className="flex-grow">{children}</main>
 
-          {/* Footer with NAP (Name, Address, Phone) for Local SEO */}
           <footer className="bg-[#1f3400] text-white py-16 px-6 border-t border-white/10">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
               <div className="md:col-span-2">
@@ -152,16 +145,16 @@ export default function RootLayout({
                   Azienda Agricola Serrea
                 </h3>
                 <p className="text-sm opacity-70 leading-relaxed max-w-sm mx-auto md:mx-0">
-                  Preserving the legacy of Italian agriculture through
-                  sustainable organic farming and the world-renowned aroma of
-                  Basilico basil.
+                  Preserviamo l'eredità dell'agricoltura ligure attraverso
+                  metodi biologici sostenibili e l'aroma inconfondibile del
+                  nostro Basilico Genovese.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-serrea-gold mb-6 uppercase tracking-widest text-xs">
-                  Navigation
+                  Menu
                 </h4>
-                <ul className="space-y-3 text-sm opacity-80">
+                <ul className="space-y-3 text-sm opacity-80 font-medium">
                   <li>
                     <a
                       href="#home"
@@ -175,7 +168,7 @@ export default function RootLayout({
                       href="#about"
                       className="hover:text-serrea-gold transition-colors"
                     >
-                      About Us
+                      Chi Siamo
                     </a>
                   </li>
                   <li>
@@ -183,7 +176,7 @@ export default function RootLayout({
                       href="#products"
                       className="hover:text-serrea-gold transition-colors"
                     >
-                      Products
+                      Prodotti
                     </a>
                   </li>
                   <li>
@@ -191,17 +184,17 @@ export default function RootLayout({
                       href="#contact"
                       className="hover:text-serrea-gold transition-colors"
                     >
-                      Contact
+                      Contatti
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-serrea-gold mb-6 uppercase tracking-widest text-xs">
-                  Contact Us
+                  Contattaci
                 </h4>
                 <address className="not-italic text-sm opacity-80 space-y-3">
-                  <p>Via serrea 15, 16158 genova</p>
+                  <p>Via Serrea 15, 16158 Genova (GE)</p>
                   <p>+39 123 456 7890</p>
                   <p>info@serreafarm.it</p>
                 </address>
