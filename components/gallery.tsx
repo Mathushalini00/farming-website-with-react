@@ -1,11 +1,11 @@
 export function Gallery() {
   const images = [
-    { url: "/organic-farm-field-with-rows-of-crops.jpg", alt: "Farm field with rows of organic crops" },
-    { url: "/farmer-harvesting-fresh-vegetables.jpg", alt: "Farmer harvesting fresh vegetables" },
-    { url: "/greenhouse-with-organic-plants.jpg", alt: "Greenhouse with organic plants" },
-    { url: "/fresh-organic-produce-basket.jpg", alt: "Basket of fresh organic produce" },
-    { url: "/tractor-working-in-farm-field.jpg", alt: "Tractor working in the field" },
-    { url: "/farmers-market-produce-stand.jpg", alt: "Farmers market produce stand" },
+    { url: "/images/im3.jpg", alt: "Farm field with rows of crops" },
+    { url: "/images/im4.jpg", alt: "Farmer harvesting fresh vegetables" },
+    { url: "/images/im5.jpg", alt: "Greenhouse with healthy plants" },
+    { url: "/images/im6.jpg", alt: "Basket of fresh produce" },
+    { url: "/images/im7.jpg", alt: "Tractor working in the field" },
+    { url: "/images/im8.jpg", alt: "Farmers market produce stand" },
   ]
 
   return (

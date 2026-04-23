@@ -1,7 +1,7 @@
 export function Products() {
   const products = [
     {
-      name: "Organic Tomatoes",
+      name: "Tomatoes",
       description: "Vine-ripened, juicy tomatoes bursting with flavor",
       image: "/images/im1.jpg",
     },
@@ -13,22 +13,22 @@ export function Products() {
     {
       name: "Sweet Corn",
       description: "Sweet, tender corn picked at peak freshness",
-      image: "/fresh-yellow-sweet-corn.jpg",
+      image: "/images/im4.jpg",
     },
     {
-      name: "Organic Carrots",
+      name: "Carrots",
       description: "Crunchy, sweet carrots rich in nutrients",
-      image: "/fresh-orange-organic-carrots.jpg",
+      image: "/images/im5.jpg",
     },
     {
       name: "Bell Peppers",
       description: "Colorful peppers with a crisp, sweet taste",
-      image: "/colorful-fresh-bell-peppers.jpg",
+      image: "/images/im6.jpg",
     },
     {
       name: "Fresh Herbs Bundle",
       description: "Aromatic herbs including basil, parsley, and cilantro",
-      image: "/fresh-green-herbs-bundle.jpg",
+      image: "/images/im7.jpg",
     },
   ];
 
@@ -40,9 +40,9 @@ export function Products() {
             Our Fresh Crops
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            Discover our selection of premium organic produce, harvested daily
-            using traditional Italian farming methods to ensure maximum
-            freshness and nutritional value.
+            Discover our selection of premium produce, harvested daily using
+            traditional Italian farming methods to ensure maximum freshness and
+            nutritional value.
           </p>
         </div>
 

@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     "Basilico Genovese",
     "Agricoltura Biologica Liguria",
     "Prodotti tipici liguri",
-    "Organic Farm Genova",
     "Serrea Farm Italy",
   ],
   metadataBase: new URL("https://www.serreafarm.it"),

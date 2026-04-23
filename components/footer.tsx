@@ -45,9 +45,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Italian family farm delivering premium organic crops using
-              sustainable practices and traditional farming methods in the heart
-              of Basilio.
+              Italian family farm delivering premium crops using sustainable
+              practices and traditional farming methods in the heart of Basilio.
             </p>
             <div className="flex items-center gap-3">
               <a

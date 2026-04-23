@@ -19,7 +19,7 @@ export default function Hero() {
           priority
           className="object-cover opacity-60 transition-transform duration-[10s] ease-smooth hover:scale-110"
         />
-        {/* Modern Organic Gradient Overlay */}
+        {/* Modern farm-inspired gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-serrea-cream/20 via-serrea-cream/40 to-serrea-cream" />
       </div>
 
@@ -33,7 +33,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-serrea-green/80 leading-relaxed max-w-2xl mx-auto mb-10 font-sans">
             Experience authentic Italian farming in the heart of Basilico. Our
             family-owned farm combines traditional methods with sustainable
-            practices to bring you the finest organic products.
+            practices to bring you the finest farm products.
           </p>
 
           <div className="flex flex-wrap gap-6 justify-center">
