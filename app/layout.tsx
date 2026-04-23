@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -138,72 +139,7 @@ export default function RootLayout({
 
           <main className="flex-grow">{children}</main>
 
-          <footer className="bg-[#1f3400] text-white py-16 px-6 border-t border-white/10">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-              <div className="md:col-span-2">
-                <h3 className="font-serif text-2xl mb-6 text-serrea-gold">
-                  Azienda Agricola Serrea
-                </h3>
-                <p className="text-sm opacity-70 leading-relaxed max-w-sm mx-auto md:mx-0">
-                  Preserviamo l'eredità dell'agricoltura ligure attraverso
-                  metodi biologici sostenibili e l'aroma inconfondibile del
-                  nostro Basilico Genovese.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-serrea-gold mb-6 uppercase tracking-widest text-xs">
-                  Menu
-                </h4>
-                <ul className="space-y-3 text-sm opacity-80 font-medium">
-                  <li>
-                    <a
-                      href="#home"
-                      className="hover:text-serrea-gold transition-colors"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#about"
-                      className="hover:text-serrea-gold transition-colors"
-                    >
-                      Chi Siamo
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#products"
-                      className="hover:text-serrea-gold transition-colors"
-                    >
-                      Prodotti
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      className="hover:text-serrea-gold transition-colors"
-                    >
-                      Contatti
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-serrea-gold mb-6 uppercase tracking-widest text-xs">
-                  Contattaci
-                </h4>
-                <address className="not-italic text-sm opacity-80 space-y-3">
-                  <p>Via Serrea 15, 16158 Genova (GE)</p>
-                  <p>+39 123 456 7890</p>
-                  <p>info@serreafarm.it</p>
-                </address>
-              </div>
-            </div>
-            <div className="mt-16 pt-8 border-t border-white/5 text-center text-[10px] uppercase tracking-[0.2em] opacity-40">
-              © 2026 Azienda Agricola Serrea | P.IVA 0123456789
-            </div>
-          </footer>
+          {/* <Footer /> */}
         </ThemeProvider>
 
         <Analytics />

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi"
+import { useState } from "react";
+import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -11,30 +11,35 @@ export function Contact() {
     email: "",
     phone: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Thank you for contacting us! We'll get back to you soon.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
-  }
+    console.log("Form submitted:", formData);
+    alert("Thank you for contacting us! We'll get back to you soon.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+            Get In Touch
+          </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            Have questions about our products or services? We'd love to hear from you.
+            Have questions about our products or services? We'd love to hear
+            from you.
           </p>
         </div>
 
@@ -46,11 +51,13 @@ export function Contact() {
                 <FiMapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Visit Our Farm</h3>
+                <h3 className="font-semibold text-foreground mb-1">
+                  Visit Our Farm
+                </h3>
                 <p className="text-muted-foreground">
-                  123 Farm Road, Green Valley
+                  Via serrea 15
                   <br />
-                  California, 95000
+                  16158 genova
                 </p>
               </div>
             </div>
@@ -62,9 +69,9 @@ export function Contact() {
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
                 <p className="text-muted-foreground">
-                  +1 (555) 123-4567
+                  +39 379 112 6068
                   <br />
-                  Mon-Sat: 8:00 AM - 6:00 PM
+                  Mon-Sat: 10:00 AM - 6:00 PM
                 </p>
               </div>
             </div>
@@ -75,22 +82,21 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                <p className="text-muted-foreground">
-                  contact@greenharvest.com
-                  <br />
-                  info@greenharvest.com
-                </p>
+                <p className="text-muted-foreground">aziendaserrea@gmail.com</p>
               </div>
             </div>
 
             {/* Map placeholder */}
             <div className="aspect-video rounded-xl overflow-hidden border border-border">
-              <img
-                src="/placeholder.svg?height=400&width=600"
-                alt="Farm location map"
-                className="w-full h-full object-cover"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.7855265089424!2d8.7494268!3d44.435894700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d33f007079d06d%3A0xa2bdc81e06769a46!2sAzienda%20agricola%20Serrea!5e1!3m2!1sen!2slk!4v1776938234687!5m2!1sen!2slk"
+                width="600"
+                height="450"
+                // style="border:0;"
+                // allowfullscreen=""
                 loading="lazy"
-              />
+                // referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
@@ -98,7 +104,10 @@ export function Contact() {
           <div className="bg-card border border-border rounded-xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-card-foreground mb-2"
+                >
                   Full Name
                 </label>
                 <input
@@ -114,7 +123,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-card-foreground mb-2"
+                >
                   Email Address
                 </label>
                 <input
@@ -130,7 +142,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-card-foreground mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-card-foreground mb-2"
+                >
                   Phone Number
                 </label>
                 <input
@@ -140,12 +155,15 @@ export function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring text-foreground"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+39 379 112 6068"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-card-foreground mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -172,5 +190,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
