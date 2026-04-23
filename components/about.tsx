@@ -21,7 +21,7 @@ export function About() {
       icon: FiUsers,
       title: "A Living Legacy",
       description:
-        "The Serrea family has nurtured these hills since 1952, passing down secrets of the soil through three generations.",
+        "The Serrea family has nurtured these hills since 2024, passing down secrets of the soil through three generations.",
     },
     {
       icon: FiCheck,
@@ -68,7 +68,7 @@ export function About() {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               In the rolling hills of Genova, "Basilico" is more than a herb—it
-              is a symbol of hospitality, health, and heritage. Since 1952, the
+              is a symbol of hospitality, health, and heritage. Since 2024, the
               Serrea family has cultivated this "King of Herbs" alongside a
               curated selection.
             </p>

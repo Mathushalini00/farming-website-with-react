@@ -1,6 +1,6 @@
 "use client";
 
-import { FiShoppingBag, FiTruck, FiLayers, FiCalendar } from "react-icons/fi";
+import { FiShoppingBag, FiTruck, FiLayers } from "react-icons/fi";
 
 export function Services() {
   const services = [
@@ -49,17 +49,17 @@ export function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-px bg-border overflow-hidden rounded-3xl border border-border">
+        {/* Services Grid - Modified for 3 Items */}
+        <div className="grid lg:grid-cols-3 gap-px bg-border overflow-hidden rounded-3xl border border-border">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="group relative p-10 md:p-14 bg-card hover:bg-muted/50 transition-all duration-500"
+                className="group relative p-10 md:p-12 bg-card hover:bg-muted/50 transition-all duration-500 flex flex-col justify-between"
               >
-                {/* Decorative Number for a premium editorial look */}
-                <span className="absolute top-10 right-10 text-5xl font-serif text-muted-foreground/10 group-hover:text-primary/20 transition-colors duration-500">
+                {/* Decorative Number */}
+                <span className="absolute top-8 right-8 text-5xl font-serif text-muted-foreground/10 group-hover:text-primary/20 transition-colors duration-500">
                   0{index + 1}
                 </span>
 
@@ -72,14 +72,14 @@ export function Services() {
                     {service.title}
                   </h3>
 
-                  <p className="text-muted-foreground leading-relaxed text-balance">
+                  <p className="text-muted-foreground leading-relaxed text-pretty">
                     {service.description}
                   </p>
+                </div>
 
-                  <div className="mt-8 flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-foreground opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-                    Learn More
-                    <span className="text-primary">→</span>
-                  </div>
+                <div className="mt-12 flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-foreground opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                  Learn More
+                  <span className="text-primary">→</span>
                 </div>
               </div>
             );

@@ -1,13 +1,15 @@
 export function Products() {
   const products = [
     {
-      name: "Tomatoes",
-      description: "Vine-ripened, juicy tomatoes bursting with flavor",
+      name: "Lemons",
+      description:
+        "Fresh, zesty lemons packed with vibrant citrus flavor, perfect for juices and cooking",
       image: "/images/im1.jpg",
     },
     {
-      name: "Fresh Lettuce Mix",
-      description: "Crisp mixed greens perfect for salads",
+      name: "Basilico",
+      description:
+        "Aromatic basil leaves with a rich, herbal fragrance, ideal for Italian dishes and fresh garnishes",
       image: "/images/im2.jpg",
     },
     {
