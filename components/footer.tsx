@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiFacebook, FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi";
 import Logo from "../public/images/azserrea.png";
-
+import { FiFacebook, FiInstagram } from "react-icons/fi";
+import { FaTiktok, FaThreads } from "react-icons/fa6";
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -10,8 +10,8 @@ export function Footer() {
     company: [
       { label: "About Us", href: "#about" },
       { label: "Our Story", href: "#about" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" },
+      // { label: "Careers", href: "#" },
+      // { label: "Press", href: "#" },
     ],
     products: [
       { label: "Fresh Produce", href: "#products" },
@@ -20,7 +20,7 @@ export function Footer() {
       { label: "Wholesale", href: "#" },
     ],
     resources: [
-      { label: "Blog", href: "#blog" },
+      // { label: "Blog", href: "#blog" },
       { label: "Recipes", href: "#blog" },
       { label: "Growing Guide", href: "#blog" },
       { label: "FAQ", href: "#" },
@@ -50,32 +50,43 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61577135920132"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 aria-label="Facebook"
               >
                 <FiFacebook className="w-5 h-5" />
               </a>
+
               <a
-                href="#"
+                href="https://www.instagram.com/az.serrea/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 aria-label="Instagram"
               >
                 <FiInstagram className="w-5 h-5" />
               </a>
+
               <a
-                href="#"
+                href="https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40aziendaserrea.202%3F_r%3D1%26_t%3DZN-91jSFfqJrKY%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn5tcYIzh-sNm096NLm8i8B8gE5njpLvvsv-yetVj8DXvD48SgpGxezC5qe-Y_aem_QbfqBE4mCjKeo2FJXe4hHw&e=AT5PmtqCoD2YzDn4cRrdvBvZ_9PUJIsJGayELCNjo1rHfpaJaDWxclascd6AGCDdpTFnskOYGQSJyE6Ha8rwz6n7LXbN7Y3t5xKPPbN3WgiOBd0AjrS4zpE1gQ"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-                aria-label="Twitter"
+                aria-label="TikTok"
               >
-                <FiTwitter className="w-5 h-5" />
+                <FaTiktok className="w-5 h-5" />
               </a>
+
               <a
-                href="#"
+                href="https://www.threads.com/@az.serrea?xmt=AQF0RXhFIUrIBEZG3yf3juJo29oElEtNi6ZhzLlOT8WwSvY"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-                aria-label="YouTube"
+                aria-label="Threads"
               >
-                <FiYoutube className="w-5 h-5" />
+                <FaThreads className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -131,9 +142,15 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-20 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-28 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Azienda Agricola Serrea. All rights reserved.
+          </p>
+          <p className="text-sm text-muted-foreground flex items-center gap-1">
+            Crafted & Developed by
+            <span className="font-medium text-foreground flex items-center gap-1">
+              Mathu <span className="text-green-500">💚</span>
+            </span>
           </p>
           <div className="flex items-center gap-6">
             <Link
