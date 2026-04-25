@@ -4,8 +4,11 @@ import type React from "react";
 
 import { useState } from "react";
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
+import { useLanguage } from "./language-provider";
+import { contactContent } from "./i18n";
 
 export function Contact() {
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,9 +18,8 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
-    alert("Thank you for contacting us! We'll get back to you soon.");
+    alert(contactContent.form.userAlert[language]);
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -35,16 +37,14 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Get In Touch
+            {contactContent.heading[language]}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            Have questions about our products or services? We'd love to hear
-            from you.
+            {contactContent.description[language]}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <div className="space-y-8">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -52,7 +52,7 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">
-                  Visit Our Farm
+                  {contactContent.visitTitle[language]}
                 </h3>
                 <p className="text-muted-foreground">
                   Via serrea 16
@@ -67,7 +67,9 @@ export function Contact() {
                 <FiPhone className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
+                <h3 className="font-semibold text-foreground mb-1">
+                  {contactContent.callTitle[language]}
+                </h3>
                 <p className="text-muted-foreground">
                   +39 379 112 6068
                   <br />
@@ -81,26 +83,23 @@ export function Contact() {
                 <FiMail className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
+                <h3 className="font-semibold text-foreground mb-1">
+                  {contactContent.emailTitle[language]}
+                </h3>
                 <p className="text-muted-foreground">aziendaserrea@gmail.com</p>
               </div>
             </div>
 
-            {/* Map placeholder */}
             <div className="aspect-video rounded-xl overflow-hidden border border-border">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.7855265089424!2d8.7494268!3d44.435894700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d33f007079d06d%3A0xa2bdc81e06769a46!2sAzienda%20agricola%20Serrea!5e1!3m2!1sen!2slk!4v1776938234687!5m2!1sen!2slk"
                 width="600"
                 height="450"
-                // style="border:0;"
-                // allowfullscreen=""
                 loading="lazy"
-                // referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-card border border-border rounded-xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -108,7 +107,7 @@ export function Contact() {
                   htmlFor="name"
                   className="block text-sm font-medium text-card-foreground mb-2"
                 >
-                  Full Name
+                  {contactContent.form.name[language]}
                 </label>
                 <input
                   type="text"
@@ -118,7 +117,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring text-foreground"
-                  placeholder="John Doe"
+                  placeholder={contactContent.form.namePlaceholder[language]}
                 />
               </div>
 
@@ -127,7 +126,7 @@ export function Contact() {
                   htmlFor="email"
                   className="block text-sm font-medium text-card-foreground mb-2"
                 >
-                  Email Address
+                  {contactContent.form.email[language]}
                 </label>
                 <input
                   type="email"
@@ -137,7 +136,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring text-foreground"
-                  placeholder="john@example.com"
+                  placeholder={contactContent.form.emailPlaceholder[language]}
                 />
               </div>
 
@@ -146,7 +145,7 @@ export function Contact() {
                   htmlFor="phone"
                   className="block text-sm font-medium text-card-foreground mb-2"
                 >
-                  Phone Number
+                  {contactContent.form.phone[language]}
                 </label>
                 <input
                   type="tel"
@@ -155,7 +154,7 @@ export function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring text-foreground"
-                  placeholder="+39 379 112 6068"
+                  placeholder={contactContent.form.phonePlaceholder[language]}
                 />
               </div>
 
@@ -164,7 +163,7 @@ export function Contact() {
                   htmlFor="message"
                   className="block text-sm font-medium text-card-foreground mb-2"
                 >
-                  Message
+                  {contactContent.form.message[language]}
                 </label>
                 <textarea
                   id="message"
@@ -174,7 +173,7 @@ export function Contact() {
                   required
                   rows={4}
                   className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring text-foreground resize-none"
-                  placeholder="Tell us about your inquiry..."
+                  placeholder={contactContent.form.messagePlaceholder[language]}
                 />
               </div>
 
@@ -183,7 +182,7 @@ export function Contact() {
                 className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
               >
                 <FiSend className="w-5 h-5" />
-                Send Message
+                {contactContent.form.submit[language]}
               </button>
             </form>
           </div>

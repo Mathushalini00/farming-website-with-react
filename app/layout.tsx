@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { LanguageProvider } from "@/components/language-provider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -129,16 +130,12 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-serrea-cream text-serrea-green min-h-screen flex flex-col`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-        >
-          <Navbar />
-
-          <main className="flex-grow">{children}</main>
-
-          {/* <Footer /> */}
+        <ThemeProvider>
+          <LanguageProvider>
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            {/* <Footer /> */}
+          </LanguageProvider>
         </ThemeProvider>
 
         <Analytics />

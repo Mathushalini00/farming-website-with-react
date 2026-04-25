@@ -1,16 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
-// Ensure this image exists in your public/images folder
+import { useLanguage } from "./language-provider";
+import { heroContent } from "./i18n";
 import HeroImage from "../public/images/im2.jpg";
 
 export default function Hero() {
+  const { language } = useLanguage();
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Optimized Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
           src={HeroImage}
@@ -19,7 +23,6 @@ export default function Hero() {
           priority
           className="object-cover opacity-60 transition-transform duration-[10s] ease-smooth hover:scale-110"
         />
-        {/* Modern farm-inspired gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-serrea-cream/20 via-serrea-cream/40 to-serrea-cream" />
       </div>
 
@@ -31,9 +34,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-serrea-green/80 leading-relaxed max-w-2xl mx-auto mb-10 font-sans">
-            Experience authentic Italian farming in the heart of Basilico. Our
-            family-owned farm combines traditional methods with sustainable
-            practices to bring you the finest farm products.
+            {heroContent.description[language]}
           </p>
 
           <div className="flex flex-wrap gap-6 justify-center">
@@ -41,7 +42,7 @@ export default function Hero() {
               href="#about"
               className="group inline-flex items-center gap-3 bg-serrea-green text-serrea-cream px-8 py-4 rounded-full font-medium transition-all duration-500 ease-smooth hover:bg-serrea-leaf hover:shadow-xl"
             >
-              Learn More
+              {heroContent.primaryButton[language]}
               <FiArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" />
             </Link>
 
@@ -49,7 +50,7 @@ export default function Hero() {
               href="#products"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium border border-serrea-green text-serrea-green hover:bg-serrea-green/5 transition-all duration-500"
             >
-              Our Products
+              {heroContent.secondaryButton[language]}
             </Link>
           </div>
         </div>

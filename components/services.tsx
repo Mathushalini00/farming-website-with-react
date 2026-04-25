@@ -1,28 +1,12 @@
 "use client";
 
 import { FiShoppingBag, FiTruck, FiLayers } from "react-icons/fi";
+import { useLanguage } from "./language-provider";
+import { servicesContent } from "./i18n";
 
 export function Services() {
-  const services = [
-    {
-      icon: FiLayers,
-      title: "Artisanal Cultivation",
-      description:
-        "We specialize in the delicate 'Basilico Genovese', grown in mineral-rich soil using traditional Ligurian methods to ensure the highest essential oil content.",
-    },
-    {
-      icon: FiShoppingBag,
-      title: "Curated Farm Boxes",
-      description:
-        "A weekly selection of our finest seasonal harvests, hand-picked and paired with artisanal Mediterranean staples for the discerning palate.",
-    },
-    {
-      icon: FiTruck,
-      title: "The Dawn Delivery",
-      description:
-        "Exclusive local distribution within hours of harvest. We ensure that the fragrance of our fields reaches your kitchen before the morning dew fades.",
-    },
-  ];
+  const { language } = useLanguage();
+  const services = servicesContent.items[language];
 
   return (
     <section
@@ -30,35 +14,28 @@ export function Services() {
       className="py-20 md:py-32 bg-background transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <h4 className="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4">
-              Our Offerings
+              {servicesContent.subtitle[language]}
             </h4>
             <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground leading-tight">
-              Beyond Farming. <br />
-              <span className="italic text-muted-foreground/80 dark:text-muted-foreground">
-                A Culinary Journey.
-              </span>
+              {servicesContent.heading[language]}
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground text-lg leading-relaxed">
-            From the roots of our heritage to the heart of your home, we provide
-            services that celebrate the purity of Italian agriculture.
+            {servicesContent.description[language]}
           </p>
         </div>
 
-        {/* Services Grid - Modified for 3 Items */}
         <div className="grid lg:grid-cols-3 gap-px bg-border overflow-hidden rounded-3xl border border-border">
           {services.map((service, index) => {
-            const Icon = service.icon;
+            const Icon = [FiLayers, FiShoppingBag, FiTruck][index];
             return (
               <div
                 key={index}
                 className="group relative p-10 md:p-12 bg-card hover:bg-muted/50 transition-all duration-500 flex flex-col justify-between"
               >
-                {/* Decorative Number */}
                 <span className="absolute top-8 right-8 text-5xl font-serif text-muted-foreground/10 group-hover:text-primary/20 transition-colors duration-500">
                   0{index + 1}
                 </span>
@@ -78,7 +55,7 @@ export function Services() {
                 </div>
 
                 <div className="mt-12 flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-foreground opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-                  Learn More
+                  {servicesContent.cta[language]}
                   <span className="text-primary">→</span>
                 </div>
               </div>

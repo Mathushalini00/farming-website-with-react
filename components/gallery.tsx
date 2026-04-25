@@ -1,11 +1,17 @@
+"use client";
+
+import { useLanguage } from "./language-provider";
+import { galleryContent } from "./i18n";
+
 export function Gallery() {
+  const { language } = useLanguage();
   const images = [
-    { url: "/images/im13.jpeg", alt: "Farm field with rows of crops" },
-    { url: "/images/im4.jpg", alt: "Farmer harvesting fresh vegetables" },
-    { url: "/images/im5.jpg", alt: "Greenhouse with healthy plants" },
-    { url: "/images/im6.jpg", alt: "Basket of fresh produce" },
-    { url: "/images/im14.jpeg", alt: "Tractor working in the field" },
-    { url: "/images/im8.jpg", alt: "Farmers market produce stand" },
+    { url: "/images/im13.jpeg", alt: "Campi coltivati" },
+    { url: "/images/im4.jpg", alt: "Contadino che raccoglie verdure fresche" },
+    { url: "/images/im5.jpg", alt: "Serra con piante rigogliose" },
+    { url: "/images/im6.jpg", alt: "Cesto di prodotti freschi" },
+    { url: "/images/im14.jpeg", alt: "Trattore nei campi" },
+    { url: "/images/im8.jpg", alt: "Banco del mercato agricolo" },
   ];
 
   return (
@@ -13,11 +19,10 @@ export function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Farm Gallery
+            {galleryContent.heading[language]}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            Take a visual journey through our farm and see the care that goes
-            into every harvest.
+            {galleryContent.description[language]}
           </p>
         </div>
 

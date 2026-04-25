@@ -1,50 +1,21 @@
+"use client";
+
+import { useLanguage } from "./language-provider";
+import { productsContent } from "./i18n";
+
 export function Products() {
-  const products = [
-    {
-      name: "Lemons",
-      description:
-        "Fresh, zesty lemons packed with vibrant citrus flavor, perfect for juices and cooking",
-      image: "/images/im1.jpg",
-    },
-    {
-      name: "Basilico",
-      description:
-        "Aromatic basil leaves with a rich, herbal fragrance, ideal for Italian dishes and fresh garnishes",
-      image: "/images/im2.jpg",
-    },
-    {
-      name: "Sweet Corn",
-      description: "Sweet, tender corn picked at peak freshness",
-      image: "/images/im4.jpg",
-    },
-    {
-      name: "Carrots",
-      description: "Crunchy, sweet carrots rich in nutrients",
-      image: "/images/im5.jpg",
-    },
-    {
-      name: "Bell Peppers",
-      description: "Colorful peppers with a crisp, sweet taste",
-      image: "/images/im6.jpg",
-    },
-    {
-      name: "Fresh Herbs Bundle",
-      description: "Aromatic herbs including basil, parsley, and cilantro",
-      image: "/images/im7.jpg",
-    },
-  ];
+  const { language } = useLanguage();
+  const products = productsContent.items[language];
 
   return (
     <section id="products" className="py-16 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Our Fresh Crops
+            {productsContent.heading[language]}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-            Discover our selection of premium produce, harvested daily using
-            traditional Italian farming methods to ensure maximum freshness and
-            nutritional value.
+            {productsContent.description[language]}
           </p>
         </div>
 
