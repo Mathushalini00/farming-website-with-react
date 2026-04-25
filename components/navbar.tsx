@@ -64,7 +64,11 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3 md:hidden">
-            <button onClick={toggleLanguage} className="p-2 text-white" aria-label={languageLabels.ariaToggle[language]}>
+            <button
+              onClick={toggleLanguage}
+              className="p-2 text-white"
+              aria-label={languageLabels.ariaToggle[language]}
+            >
               {language === "it" ? "EN" : "IT"}
             </button>
             <button onClick={toggleTheme} className="p-2 text-white">
