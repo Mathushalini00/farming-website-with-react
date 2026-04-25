@@ -55,7 +55,7 @@ export function Contact() {
                   Visit Our Farm
                 </h3>
                 <p className="text-muted-foreground">
-                  Via serrea 15
+                  Via serrea 16
                   <br />
                   16158 genova
                 </p>

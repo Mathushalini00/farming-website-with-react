@@ -94,7 +94,7 @@ export default function RootLayout({
                 "Azienda agricola specializzata nella produzione di Basilico Genovese e colture sostenibili a Genova.",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Via Serrea 15",
+                streetAddress: "Via Serrea 16",
                 addressLocality: "Genova",
                 addressRegion: "GE",
                 postalCode: "16158",
