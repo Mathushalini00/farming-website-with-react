@@ -18,14 +18,107 @@ export const navbarLinks: LocaleLink[] = [
 ];
 
 export const heroContent = {
-  description: {
-    it: "Vivi l'autentica agricoltura italiana nel cuore del basilico. La nostra azienda a conduzione familiare unisce metodi tradizionali a pratiche sostenibili per offrirti i migliori prodotti della terra.",
-    en: "Experience authentic Italian farming in the heart of Basilico. Our family-owned farm combines traditional methods with sustainable practices to bring you the finest farm products.",
+  imageAlt: {
+    it: "Basilico Genovese DOP coltivato nelle colline di Voltri",
+    en: "Basilico Genovese DOP grown in the hills of Voltri",
   },
-  primaryButton: { it: "Scopri di più", en: "Learn More" },
-  secondaryButton: { it: "I nostri prodotti", en: "Our Products" },
-};
 
+  certificationBadge: {
+    it: "Coltiviamo Basilico Genovese DOP nelle colline di Voltri",
+    en: "We cultivate Basilico Genovese DOP in the hills of Voltri",
+  },
+
+  headline: {
+    it: "Tradizione Agricola Italiana dal Cuore della Liguria",
+    en: "Authentic Italian Farming from the Heart of Liguria",
+  },
+
+  subtitle: {
+    it: "Basilico Genovese DOP coltivato con passione e metodi tradizionali.",
+    en: "Premium Basilico Genovese DOP cultivated with passion and traditional methods.",
+  },
+
+  description: {
+    it: "Nelle colline di Voltri coltiviamo Basilico Genovese DOP e prodotti agricoli selezionati, rispettando la natura e le tradizioni della nostra terra.",
+    en: "In the hills of Voltri we cultivate Basilico Genovese DOP and carefully selected crops while respecting nature and Italian farming traditions.",
+  },
+
+  primaryButton: {
+    it: "Scopri i Prodotti",
+    en: "Explore Products",
+  },
+
+  secondaryButton: {
+    it: "Chi Siamo",
+    en: "About Us",
+  },
+
+  floatingCard: {
+    title: {
+      it: "Certificazione DOP",
+      en: "DOP Certification",
+    },
+
+    location: {
+      it: "Colline di Voltri, Genova",
+      en: "Voltri Hills, Genoa",
+    },
+
+    quality: {
+      it: "Qualità certificata e coltivazione sostenibile",
+      en: "Certified quality and sustainable cultivation",
+    },
+  },
+};
+export const heroTrustIndicators = [
+  {
+    icon: "award",
+    label: {
+      it: "Certificato DOP",
+      en: "DOP Certified",
+    },
+    description: {
+      it: "Basilico Genovese DOP autentico",
+      en: "Authentic Basilico Genovese DOP",
+    },
+  },
+
+  {
+    icon: "leaf",
+    label: {
+      it: "Agricoltura Sostenibile",
+      en: "Sustainable Farming",
+    },
+    description: {
+      it: "Rispetto per la natura e il territorio",
+      en: "Respect for nature and local land",
+    },
+  },
+
+  {
+    icon: "map",
+    label: {
+      it: "Voltri, Genova",
+      en: "Voltri, Genoa",
+    },
+    description: {
+      it: "Territorio ideale per il basilico",
+      en: "Ideal territory for basil cultivation",
+    },
+  },
+
+  {
+    icon: "flag",
+    label: {
+      it: "100% Italiano",
+      en: "100% Italian",
+    },
+    description: {
+      it: "Coltivato e raccolto in Italia",
+      en: "Grown and harvested in Italy",
+    },
+  },
+] as const;
 export const aboutContent = {
   subtitle: { it: "La nostra essenza", en: "Our Essence" },
   heading: {
@@ -103,70 +196,76 @@ export const productsContent = {
       {
         name: "Limoni",
         description:
-          "Limoni freschi e profumati, perfetti per succhi e ricette mediterranee.",
+          "Coltivati nel clima mediterraneo della Liguria, i nostri limoni si distinguono per il loro profumo intenso, la freschezza naturale e l'eccellente qualità.",
         image: "/images/im1.jpg",
       },
       {
-        name: "Basilico",
+        name: "Basilico Genovese DOP",
         description:
-          "Foglie aromatiche dal profumo intenso, ideali per piatti italiani e guarnizioni fresche.",
+          "Coltivato nelle colline di Voltri secondo il disciplinare ufficiale DOP, il nostro basilico offre un aroma delicato, foglie tenere e l'autentico sapore della tradizione ligure.",
         image: "/images/im2.jpg",
       },
       {
-        name: "Mais dolce",
+        name: "Lattuga Fresca",
         description:
-          "Mais tenero e dolce, raccolto al punto giusto di maturazione.",
-        image: "/images/im4.jpg",
-      },
-      {
-        name: "Carote",
-        description: "Carote croccanti e dolci, ricche di nutrienti.",
+          "Coltivata con cura e raccolta al momento ideale, la nostra lattuga garantisce croccantezza, freschezza e qualità direttamente dal campo.",
         image: "/images/im5.jpg",
       },
       {
-        name: "Peperoni",
-        description: "Peperoni colorati dal sapore dolce e croccante.",
+        name: "Radicchio Rosso",
+        description:
+          "Radicchio fresco e croccante dal caratteristico sapore leggermente amaro, perfetto per insalate e piatti gourmet.",
         image: "/images/im6.jpg",
       },
       {
-        name: "Mazzo di erbe fresche",
+        name: "Finocchio Fresco",
         description:
-          "Un assortimento aromatico di basilico, prezzemolo e altre erbe fresche.",
-        image: "/images/im7.jpg",
+          "Finocchio aromatico e croccante dal gusto delicato e leggermente dolce, ideale per insalate e contorni.",
+        image: "/images/im14.jpeg",
+      },
+      {
+        name: "Broccoli Freschi",
+        description:
+          "Broccoli nutrienti e saporiti, ricchi di vitamine e coltivati con cura per garantire la massima qualità.",
+        image: "/images/im8.jpg",
       },
     ],
     en: [
       {
         name: "Lemons",
         description:
-          "Fresh, zesty lemons packed with vibrant citrus flavor, perfect for juices and cooking",
+          "Grown in the Mediterranean climate of Liguria, our lemons are known for their vibrant aroma, natural freshness, and exceptional quality.",
         image: "/images/im1.jpg",
       },
       {
-        name: "Basilico",
+        name: "Genovese DOP Basil",
         description:
-          "Aromatic basil leaves with a rich, herbal fragrance, ideal for Italian dishes and fresh garnishes",
+          "Grown in the hills of Voltri following official DOP regulations, our basil offers a delicate aroma, tender leaves, and the authentic taste of Ligurian tradition.",
         image: "/images/im2.jpg",
       },
       {
-        name: "Sweet Corn",
-        description: "Sweet, tender corn picked at peak freshness",
-        image: "/images/im4.jpg",
-      },
-      {
-        name: "Carrots",
-        description: "Crunchy, sweet carrots rich in nutrients",
+        name: "Fresh Lettuce",
+        description:
+          "Carefully cultivated and harvested at the perfect time, our lettuce delivers crisp texture, freshness, and quality straight from the field.",
         image: "/images/im5.jpg",
       },
       {
-        name: "Bell Peppers",
-        description: "Colorful peppers with a crisp, sweet taste",
+        name: "Red Radicchio",
+        description:
+          "Fresh and crisp radicchio with a distinctive slightly bitter flavor, perfect for salads and gourmet dishes.",
         image: "/images/im6.jpg",
       },
       {
-        name: "Fresh Herbs Bundle",
-        description: "Aromatic herbs including basil, parsley, and cilantro",
-        image: "/images/im7.jpg",
+        name: "Zucchini",
+        description:
+          "Aromatic and crunchy zucchini with a delicate, slightly sweet flavor, ideal for salads and side dishes.",
+        image: "/images/im15.jpeg",
+      },
+      {
+        name: "Fresh Broccoli",
+        description:
+          "Nutritious and flavorful broccoli, rich in vitamins and carefully grown to ensure the highest quality.",
+        image: "/images/im8.jpg",
       },
     ],
   },

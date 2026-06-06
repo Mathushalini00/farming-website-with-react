@@ -3,7 +3,7 @@ import { About } from "@/components/about";
 import { Products } from "@/components/products";
 import { Services } from "@/components/services";
 import { Gallery } from "@/components/gallery";
-import { Blog } from "@/components/blog";
+// import { Blog } from "@/components/blog";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import Hero from "@/components/hero";

@@ -137,7 +137,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             {footerContent.craftedBy[language]}
             <span className="font-medium text-foreground flex items-center gap-1">
-              Mathu <span className="text-green-500">💚</span>
+              Mathus <span className="text-green-500">💚</span>
             </span>
           </p>
           <div className="flex items-center gap-6">
