@@ -253,7 +253,7 @@ export const productsContent = {
         name: "Red Radicchio",
         description:
           "Fresh and crisp radicchio with a distinctive slightly bitter flavor, perfect for salads and gourmet dishes.",
-        image: "/images/im6.jpg",
+        image: "/images/im5.jpg",
       },
       {
         name: "Zucchini",
