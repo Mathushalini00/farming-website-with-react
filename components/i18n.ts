@@ -244,10 +244,10 @@ export const productsContent = {
         image: "/images/im2.jpg",
       },
       {
-        name: "Red Radicchio",
+        name: "Fresh Lettuce",
         description:
-          "Fresh and crisp radicchio with a distinctive slightly bitter flavor, perfect for salads and gourmet dishes.",
-        image: "/images/im5.jpg",
+          "Carefully cultivated and harvested at the perfect time, our lettuce delivers crisp texture, freshness, and quality straight from the field.",
+        image: "/images/im6.jpg",
       },
       {
         name: "Red Radicchio",

@@ -43,7 +43,7 @@ export default function Hero() {
             className="object-cover scale-105 motion-safe:transition-transform motion-safe:duration-[12s] ease-out"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-serrea-cream" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/75 via-black/50 to-serrea-cream" />
 
           <div
             className="absolute inset-0 opacity-[0.07] pointer-events-none"
@@ -80,7 +80,7 @@ export default function Hero() {
               <div className="animate-fade-in-delay-2 flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
                   href="#products"
-                  className="group inline-flex items-center justify-center gap-3 bg-serrea-cream text-serrea-green px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="group inline-flex items-center justify-center gap-3 bg-serrea-cream text-serrea-green px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   {heroContent.primaryButton[language]}
                   <FiArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -88,7 +88,7 @@ export default function Hero() {
 
                 <Link
                   href="#about"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   {heroContent.secondaryButton[language]}
                 </Link>
