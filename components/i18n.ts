@@ -209,13 +209,13 @@ export const productsContent = {
         name: "Lattuga Fresca",
         description:
           "Coltivata con cura e raccolta al momento ideale, la nostra lattuga garantisce croccantezza, freschezza e qualità direttamente dal campo.",
-        image: "/images/im5.jpg",
+        image: "/images/im6.jpg",
       },
       {
         name: "Radicchio Rosso",
         description:
           "Radicchio fresco e croccante dal caratteristico sapore leggermente amaro, perfetto per insalate e piatti gourmet.",
-        image: "/images/im6.jpg",
+        image: "/images/im5.jpg",
       },
       {
         name: "Finocchio Fresco",
