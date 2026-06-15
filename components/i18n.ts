@@ -206,9 +206,9 @@ export const productsContent = {
         image: "/images/im2.jpg",
       },
       {
-        name: "Lattuga Fresca",
+        name: "Finocchio Fresco",
         description:
-          "Coltivata con cura e raccolta al momento ideale, la nostra lattuga garantisce croccantezza, freschezza e qualità direttamente dal campo.",
+          "Finocchio fresco, aromatico e croccante, dal gusto delicato e leggermente dolce, ideale per insalate, contorni e ricette mediterranee.",
         image: "/images/im6.jpg",
       },
       {
@@ -218,9 +218,9 @@ export const productsContent = {
         image: "/images/im5.jpg",
       },
       {
-        name: "Finocchio Fresco",
+        name: "Zucchine",
         description:
-          "Finocchio aromatico e croccante dal gusto delicato e leggermente dolce, ideale per insalate e contorni.",
+          "Zucchine fresche e tenere, dal sapore delicato e versatile, perfette per grigliate, contorni, zuppe e ricette mediterranee.",
         image: "/images/im15.jpeg",
       },
       {
@@ -230,6 +230,7 @@ export const productsContent = {
         image: "/images/im8.jpg",
       },
     ],
+
     en: [
       {
         name: "Lemons",
@@ -244,21 +245,21 @@ export const productsContent = {
         image: "/images/im2.jpg",
       },
       {
-        name: "Fresh Lettuce",
+        name: "Fresh Fennel",
         description:
-          "Carefully cultivated and harvested at the perfect time, our lettuce delivers crisp texture, freshness, and quality straight from the field.",
-        image: "/images/im5.jpg",
+          "Fresh, aromatic, and crunchy fennel with a delicate, slightly sweet flavor, ideal for salads, side dishes, and Mediterranean recipes.",
+        image: "/images/im6.jpg",
       },
       {
         name: "Red Radicchio",
         description:
           "Fresh and crisp radicchio with a distinctive slightly bitter flavor, perfect for salads and gourmet dishes.",
-        image: "/images/im6.jpg",
+        image: "/images/im5.jpg",
       },
       {
         name: "Zucchini",
         description:
-          "Aromatic and crunchy zucchini with a delicate, slightly sweet flavor, ideal for salads and side dishes.",
+          "Fresh and tender zucchini with a delicate flavor and versatile use, perfect for grilling, side dishes, soups, and Mediterranean recipes.",
         image: "/images/im15.jpeg",
       },
       {
