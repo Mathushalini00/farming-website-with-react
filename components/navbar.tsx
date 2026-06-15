@@ -15,7 +15,7 @@ export function Navbar() {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1f3400] border-b border-white/10 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 dark:bg-background/95 border-b border-border/30 shadow-lg backdrop-blur-xl transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           <Link href="/" className="flex items-center h-full">
@@ -35,7 +35,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold tracking-widest text-white hover:text-serrea-gold transition-colors relative group"
+                className="text-sm font-semibold tracking-widest text-foreground hover:text-primary transition-colors relative group"
               >
                 {link.label[language]}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-serrea-gold transition-all duration-300 group-hover:w-full" />
@@ -44,7 +44,7 @@ export function Navbar() {
 
             <button
               onClick={toggleLanguage}
-              className="px-3 py-2 rounded-full border border-white/20 bg-white/5 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
+              className="px-3 py-2 rounded-full border border-border/30 bg-card/70 text-foreground text-sm font-semibold hover:bg-muted/60 transition-colors"
               aria-label={languageLabels.ariaToggle[language]}
             >
               {language === "it" ? "EN" : "IT"}
@@ -52,13 +52,13 @@ export function Navbar() {
 
             <button
               onClick={toggleTheme}
-              className="p-2 ml-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors border border-white/20"
+              className="p-2 ml-2 rounded-full bg-card/70 hover:bg-muted/60 transition-colors border border-border/30"
               aria-label="Toggle theme"
             >
               {theme === "light" ? (
-                <FiMoon className="w-5 h-5 text-white" />
+                <FiMoon className="w-5 h-5 text-foreground" />
               ) : (
-                <FiSun className="w-5 h-5 text-serrea-gold" />
+                <FiSun className="w-5 h-5 text-primary" />
               )}
             </button>
           </div>
@@ -66,21 +66,21 @@ export function Navbar() {
           <div className="flex items-center gap-3 md:hidden">
             <button
               onClick={toggleLanguage}
-              className="p-2 text-white"
+              className="p-2 text-foreground"
               aria-label={languageLabels.ariaToggle[language]}
             >
               {language === "it" ? "EN" : "IT"}
             </button>
-            <button onClick={toggleTheme} className="p-2 text-white">
+            <button onClick={toggleTheme} className="p-2 text-foreground">
               {theme === "light" ? (
-                <FiMoon className="w-5 h-5" />
+                <FiMoon className="w-5 h-5 text-foreground" />
               ) : (
-                <FiSun className="w-5 h-5" />
+                <FiSun className="w-5 h-5 text-primary" />
               )}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-white"
+              className="p-2 text-foreground"
             >
               {isOpen ? (
                 <FiX className="w-7 h-7" />
@@ -93,13 +93,13 @@ export function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden border-t border-white/10 bg-[#1f3400]">
+        <div className="md:hidden border-t border-border/30 bg-background/95">
           <div className="px-4 py-6 space-y-4">
             {navbarLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-lg font-medium text-white hover:text-serrea-gold"
+                className="block text-lg font-medium text-foreground hover:text-primary"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label[language]}

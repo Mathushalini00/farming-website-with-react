@@ -90,13 +90,14 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="aspect-video rounded-xl overflow-hidden border border-border">
+            <div className="aspect-[4/3] sm:aspect-video rounded-xl overflow-hidden border border-border min-h-[280px]">
               <iframe
+                className="w-full h-full"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.7855265089424!2d8.7494268!3d44.435894700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d33f007079d06d%3A0xa2bdc81e06769a46!2sAzienda%20agricola%20Serrea!5e1!3m2!1sen!2slk!4v1776938234687!5m2!1sen!2slk"
-                width="600"
-                height="450"
                 loading="lazy"
-              ></iframe>
+                title="Azienda agricola Serrea location"
+                allowFullScreen
+              />
             </div>
           </div>
 

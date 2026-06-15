@@ -221,7 +221,7 @@ export const productsContent = {
         name: "Finocchio Fresco",
         description:
           "Finocchio aromatico e croccante dal gusto delicato e leggermente dolce, ideale per insalate e contorni.",
-        image: "/images/im14.jpeg",
+        image: "/images/im15.jpeg",
       },
       {
         name: "Broccoli Freschi",
@@ -247,13 +247,13 @@ export const productsContent = {
         name: "Fresh Lettuce",
         description:
           "Carefully cultivated and harvested at the perfect time, our lettuce delivers crisp texture, freshness, and quality straight from the field.",
-        image: "/images/im6.jpg",
+        image: "/images/im5.jpg",
       },
       {
         name: "Red Radicchio",
         description:
           "Fresh and crisp radicchio with a distinctive slightly bitter flavor, perfect for salads and gourmet dishes.",
-        image: "/images/im5.jpg",
+        image: "/images/im6.jpg",
       },
       {
         name: "Zucchini",

@@ -13,6 +13,7 @@ import {
 import { useLanguage } from "./language-provider";
 import { heroContent, heroTrustIndicators } from "./i18n";
 import HeroImage from "../public/images/im2.jpg";
+import DopImage from "../public/images/dop.jpg";
 
 const trustIcons = {
   award: FiAward,
@@ -57,7 +58,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 md:py-16">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-7 text-center lg:text-left">
-              <p className="animate-fade-in inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-serrea-cream text-xs sm:text-sm font-medium tracking-wide mb-6">
+              <p className="animate-fade-in inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/10 dark:bg-white/5 backdrop-blur-sm text-serrea-cream text-xs sm:text-sm font-medium tracking-wide mb-6">
                 <span aria-hidden="true">🏅</span>
                 {heroContent.certificationBadge[language]}
               </p>
@@ -103,27 +104,47 @@ export default function Hero() {
                   : "Basilico Genovese DOP Certification"
               }
             >
-              <div className="w-full max-w-sm rounded-2xl border border-white/30 bg-white/95 backdrop-blur-md shadow-2xl p-6 md:p-8 text-serrea-green transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-                <p className="flex items-center gap-2 text-lg font-serif font-semibold mb-4 pb-4 border-b border-serrea-green/10">
-                  <span aria-hidden="true">🏅</span>
-                  {heroContent.floatingCard.title[language]}
-                </p>
+              <div className="w-full max-w-2xl">
+                <div className="rounded-2xl border border-white/30 bg-white/95 dark:bg-background dark:border-border/40 backdrop-blur-md shadow-2xl p-6 md:p-8 text-serrea-green dark:text-foreground transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+                  <div className="md:flex md:items-start md:gap-6">
+                    <div className="flex-1">
+                      <p className="flex items-center gap-2 text-lg font-serif font-semibold mb-4 pb-4 border-b border-serrea-green/10 dark:border-border/30">
+                        <span aria-hidden="true">🏅</span>
+                        {heroContent.floatingCard.title[language]}
+                      </p>
 
-                <ul className="space-y-4 text-sm md:text-base">
-                  <li className="flex items-center gap-3">
-                    <span aria-hidden="true">📍</span>
-                    <span className="font-medium">
-                      {heroContent.floatingCard.location[language]}
-                    </span>
-                  </li>
+                      <ul className="space-y-4 text-sm md:text-base">
+                        <li className="flex items-center gap-3">
+                          <span aria-hidden="true">📍</span>
+                          <span className="font-medium">
+                            {heroContent.floatingCard.location[language]}
+                          </span>
+                        </li>
 
-                  <li className="flex items-center gap-3">
-                    <span aria-hidden="true">🌿</span>
-                    <span className="font-medium">
-                      {heroContent.floatingCard.quality[language]}
-                    </span>
-                  </li>
-                </ul>
+                        <li className="flex items-center gap-3">
+                          <span aria-hidden="true">🌿</span>
+                          <span className="font-medium">
+                            {heroContent.floatingCard.quality[language]}
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="mt-6 md:mt-0 md:w-40 md:h-40 overflow-hidden rounded-2xl border border-border/30 bg-muted/10 dark:bg-muted/20">
+                      <Image
+                        src={DopImage}
+                        alt={
+                          language === "it"
+                            ? "Certificato DOP"
+                            : "DOP certificate"
+                        }
+                        width={360}
+                        height={360}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
@@ -134,7 +155,7 @@ export default function Hero() {
         aria-label={
           language === "it" ? "Indicatori di qualità" : "Quality indicators"
         }
-        className="relative z-20 bg-white/95 border-y border-serrea-green/10 shadow-sm"
+        className="relative z-20 bg-white/95 dark:bg-background/90 border-y border-serrea-green/10 dark:border-border/30 shadow-sm"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
           <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -144,7 +165,7 @@ export default function Hero() {
               return (
                 <li
                   key={item.icon}
-                  className="group flex flex-col items-center text-center p-4 md:p-5 rounded-xl bg-serrea-cream/50 border border-serrea-green/5 transition-all duration-300 hover:bg-white hover:shadow-md hover:border-serrea-leaf/20"
+                  className="group flex flex-col items-center text-center p-4 md:p-5 rounded-xl bg-serrea-cream/50 dark:bg-muted/80 border border-serrea-green/5 dark:border-border/30 transition-all duration-300 hover:bg-white hover:shadow-md hover:border-serrea-leaf/20 dark:hover:bg-background/80"
                 >
                   <span className="flex items-center justify-center w-12 h-12 rounded-full bg-serrea-green/10 text-serrea-green mb-3 transition-colors duration-300 group-hover:bg-serrea-green group-hover:text-serrea-cream">
                     <Icon className="w-5 h-5" aria-hidden />

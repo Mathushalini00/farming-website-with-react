@@ -18,7 +18,7 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center h-full">
-              <div className="relative w-24 h-18 md:w-32 md:h-20 transition-transform duration-500 group-hover:scale-105">
+              <div className="relative w-24 h-24 md:w-32 md:h-24 transition-transform duration-500 hover:scale-105">
                 <Image
                   src={Logo}
                   alt="Azienda Agricola Serrea Logo"
@@ -31,7 +31,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               {footerContent.description[language]}
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <a
                 href="https://www.facebook.com/profile.php?id=61577135920132"
                 target="_blank"
@@ -129,18 +129,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-28 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Azienda Agricola Serrea.{" "}
-            {footerContent.copyright[language]}
-          </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            {footerContent.craftedBy[language]}
-            <span className="font-medium text-foreground flex items-center gap-1">
-              MathuSha <span className="text-green-500">💚</span>
-            </span>
-          </p>
-          <div className="flex items-center gap-6">
+        <div className="pt-8 sm:pt-12 border-t border-border flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-2 text-center sm:text-left">
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} Azienda Agricola Serrea.{" "}
+              {footerContent.copyright[language]}
+            </p>
+            <p className="text-sm text-muted-foreground flex flex-col sm:flex-row sm:items-center sm:gap-1">
+              {footerContent.craftedBy[language]}
+              <span className="font-medium text-foreground flex items-center gap-1 justify-center sm:justify-start">
+                MathuSha <span className="text-green-500">💚</span>
+              </span>
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center sm:justify-end items-center gap-4">
             <Link
               href="#"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
