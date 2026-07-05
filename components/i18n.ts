@@ -127,12 +127,12 @@ export const aboutContent = {
   },
   paragraphs: {
     it: [
-      "Nelle colline di Genova, il basilico è più di un'erba: è simbolo di ospitalità, salute e patrimonio. Dal 2024, la famiglia Serrea coltiva questo 're delle erbe' insieme a una selezione curata.",
-      "La nostra filosofia è semplice: la natura non ha bisogno di correzioni. Nutrendo il terreno del nostro podere ancestrale, produciamo ingredienti che portano il profumo della brezza mediterranea e il calore del sole italiano.",
+      "Fondata nel 2024 in Italia, AZ AGR Serrea nasce dalla passione di una famiglia con profonde radici nell'agricoltura. Cresciuta in Sri Lanka, dove la coltivazione della terra è una tradizione tramandata da generazioni, la famiglia ha portato in Italia la propria esperienza, i propri valori e un'autentica dedizione all'agricoltura.",
+      "Situata sulle colline di Voltri, Genova, AZ AGR Serrea si dedica a un'agricoltura sostenibile, alla qualità e al rispetto dei valori che da sempre guidano il suo percorso.",
     ],
     en: [
-      "In the rolling hills of Genova, Basilico is more than a herb—it is a symbol of hospitality, health, and heritage. Since 2024, the Serrea family has cultivated this 'King of Herbs' alongside a curated selection.",
-      "Our philosophy is simple: nature needs no correction. By nurturing the soil of our ancestral farm, we produce ingredients that carry the fragrance of the Mediterranean breeze and the warmth of the Italian sun.",
+      "Founded in 2024 in Italy, AZ AGR Serrea is a family-owned agricultural company built on a lifelong passion for farming. With over 18 years of experience in basil cultivation, the company combines traditional farming knowledge with modern agricultural practices to produce premium-quality products.",
+      "Based in the hills of Voltri, Italy, AZ AGR Serrea is dedicated to sustainable agriculture, exceptional quality, and preserving the values that have shaped its farming heritage.",
     ],
   },
   badge: { it: "Dal 2024", en: "Est. 2024" },
