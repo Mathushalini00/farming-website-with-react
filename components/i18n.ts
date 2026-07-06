@@ -128,11 +128,11 @@ export const aboutContent = {
   paragraphs: {
     it: [
       "Fondata nel 2024 in Italia, AZ AGR Serrea nasce dalla passione di una famiglia con profonde radici nell'agricoltura. Cresciuta in Sri Lanka, dove la coltivazione della terra è una tradizione tramandata da generazioni, la famiglia ha portato in Italia la propria esperienza, i propri valori e un'autentica dedizione all'agricoltura.",
-      "Situata sulle colline di Voltri, Genova, AZ AGR Serrea si dedica a un'agricoltura sostenibile, alla qualità e al rispetto dei valori che da sempre guidano il suo percorso.",
+      "Con oltre 15 anni di esperienza nella coltivazione del basilico, l'azienda unisce il sapere della tradizione alle moderne tecniche agricole per coltivare prodotti di qualità superiore. Per la nostra famiglia, l'agricoltura non è semplicemente un'attività, ma uno stile di vita fondato sulla passione, sul rispetto della natura e sull'impegno costante verso l'eccellenza",
     ],
     en: [
-      "Founded in 2024 in Italy, AZ AGR Serrea is a family-owned agricultural company built on a lifelong passion for farming. With over 18 years of experience in basil cultivation, the company combines traditional farming knowledge with modern agricultural practices to produce premium-quality products.",
-      "Based in the hills of Voltri, Italy, AZ AGR Serrea is dedicated to sustainable agriculture, exceptional quality, and preserving the values that have shaped its farming heritage.",
+      "Founded in 2024 in Italy, AZ AGR Serrea was born from the passion of a family with deep roots in agriculture. Raised in Sri Lanka, where farming has been a tradition passed down through generations, the family brought their experience, values, and genuine dedication to agriculture to Italy.",
+      "With over 15 years of experience in basil cultivation, the company combines traditional farming knowledge with modern agricultural practices to produce premium-quality products.For our family, farming is not simply a business-it is a way of life built on passion, respect for nature, and a constant commitment to excellence. 🌿",
     ],
   },
   badge: { it: "Dal 2024", en: "Est. 2024" },
