@@ -194,11 +194,12 @@ export const productsContent = {
   items: {
     it: [
       {
-        name: "Limoni",
+        name: "Tomatoes",
         description:
-          "Coltivati nel clima mediterraneo della Liguria, i nostri limoni si distinguono per il loro profumo intenso, la freschezza naturale e l'eccellente qualità.",
-        image: "/images/im1.jpg",
+          "Carefully grown in the fertile fields of Italy, our tomatoes are cultivated using sustainable farming practices to deliver exceptional freshness, rich flavor, and premium quality.",
+        image: "/images/im21.jpeg",
       },
+
       {
         name: "Basilico Genovese DOP",
         description:
@@ -233,11 +234,12 @@ export const productsContent = {
 
     en: [
       {
-        name: "Lemons",
+        name: "Pomodori",
         description:
-          "Grown in the Mediterranean climate of Liguria, our lemons are known for their vibrant aroma, natural freshness, and exceptional quality.",
-        image: "/images/im21.jpg",
+          "Coltivati con cura nei fertili terreni italiani, i nostri pomodori crescono secondo pratiche agricole sostenibili per offrire freschezza, sapore autentico e qualità superiore.",
+        image: "/images/im21.jpeg",
       },
+
       {
         name: "Genovese DOP Basil",
         description:

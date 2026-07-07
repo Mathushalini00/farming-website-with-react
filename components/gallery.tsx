@@ -6,15 +6,17 @@ import { galleryContent } from "./i18n";
 export function Gallery() {
   const { language } = useLanguage();
   const images = [
-    { url: "/images/im13.jpeg", alt: "Campi coltivati" },
-    { url: "/images/im4.jpg", alt: "Contadino che raccoglie verdure fresche" },
+    { url: "/images/im16.jpeg", alt: "Banco del mercato agricolo" },
+
     { url: "/images/im5.jpg", alt: "Serra con piante rigogliose" },
     { url: "/images/im6.jpg", alt: "Cesto di prodotti freschi" },
     { url: "/images/im14.jpeg", alt: "Trattore nei campi" },
+    { url: "/images/im18.jpeg", alt: "Banco del mercato agricolo" },
+    { url: "/images/im4.jpg", alt: "Contadino che raccoglie verdure fresche" },
+
+    { url: "/images/im17.jpeg", alt: "Banco del mercato agricolo" },
     { url: "/images/im8.jpg", alt: "Banco del mercato agricolo" },
-    { url: "/images/im16.jpg", alt: "Banco del mercato agricolo" },
-    { url: "/images/im4.jpg", alt: "Banco del mercato agricolo" },
-    { url: "/images/im17.jpg", alt: "Banco del mercato agricolo" },
+    { url: "/images/im20.jpeg", alt: "Campi coltivati" },
   ];
 
   return (
