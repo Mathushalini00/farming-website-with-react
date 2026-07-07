@@ -202,7 +202,7 @@ export const productsContent = {
       {
         name: "Pomodori",
         description:
-          "Carefully grown in the fertile fields of Italy, our tomatoes are cultivated using sustainable farming practices to deliver exceptional freshness, rich flavor, and premium quality.",
+          "Coltivati con cura nei fertili terreni italiani, i nostri pomodori crescono secondo pratiche agricole sostenibili per offrire freschezza, sapore autentico e qualità superiore.",
         image: "/images/im21.jpeg",
       },
 
@@ -242,7 +242,8 @@ export const productsContent = {
       {
         name: "Tomatoes",
         description:
-          "Coltivati con cura nei fertili terreni italiani, i nostri pomodori crescono secondo pratiche agricole sostenibili per offrire freschezza, sapore autentico e qualità superiore.",
+          "Carefully grown in the fertile fields of Italy, our tomatoes are cultivated using sustainable farming practices to deliver exceptional freshness, rich flavor, and premium quality.",
+
         image: "/images/im21.jpeg",
       },
 
