@@ -12,6 +12,10 @@ export function Gallery() {
     { url: "/images/im6.jpg", alt: "Cesto di prodotti freschi" },
     { url: "/images/im14.jpeg", alt: "Trattore nei campi" },
     { url: "/images/im8.jpg", alt: "Banco del mercato agricolo" },
+    { url: "/images/im16.jpg", alt: "Banco del mercato agricolo" },
+    { url: "/images/im18.jpg", alt: "Banco del mercato agricolo" },
+    { url: "/images/im19.jpg", alt: "Banco del mercato agricolo" },
+    { url: "/images/im17.jpg", alt: "Banco del mercato agricolo" },
   ];
 
   return (

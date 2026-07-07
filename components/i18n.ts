@@ -236,7 +236,7 @@ export const productsContent = {
         name: "Lemons",
         description:
           "Grown in the Mediterranean climate of Liguria, our lemons are known for their vibrant aroma, natural freshness, and exceptional quality.",
-        image: "/images/im1.jpg",
+        image: "/images/im21.jpg",
       },
       {
         name: "Genovese DOP Basil",
