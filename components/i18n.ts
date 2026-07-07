@@ -194,18 +194,18 @@ export const productsContent = {
   items: {
     it: [
       {
+        name: "Basilico Genovese DOP",
+        description:
+          "Coltivato nelle colline di Voltri secondo il disciplinare ufficiale DOP, il nostro basilico offre un aroma delicato, foglie tenere e l'autentico sapore della tradizione ligure.",
+        image: "/images/im2.jpg",
+      },
+      {
         name: "Tomatoes",
         description:
           "Carefully grown in the fertile fields of Italy, our tomatoes are cultivated using sustainable farming practices to deliver exceptional freshness, rich flavor, and premium quality.",
         image: "/images/im21.jpeg",
       },
 
-      {
-        name: "Basilico Genovese DOP",
-        description:
-          "Coltivato nelle colline di Voltri secondo il disciplinare ufficiale DOP, il nostro basilico offre un aroma delicato, foglie tenere e l'autentico sapore della tradizione ligure.",
-        image: "/images/im2.jpg",
-      },
       {
         name: "Finocchio Fresco",
         description:
@@ -234,18 +234,18 @@ export const productsContent = {
 
     en: [
       {
+        name: "Genovese DOP Basil",
+        description:
+          "Grown in the hills of Voltri following official DOP regulations, our basil offers a delicate aroma, tender leaves, and the authentic taste of Ligurian tradition.",
+        image: "/images/im2.jpg",
+      },
+      {
         name: "Pomodori",
         description:
           "Coltivati con cura nei fertili terreni italiani, i nostri pomodori crescono secondo pratiche agricole sostenibili per offrire freschezza, sapore autentico e qualità superiore.",
         image: "/images/im21.jpeg",
       },
 
-      {
-        name: "Genovese DOP Basil",
-        description:
-          "Grown in the hills of Voltri following official DOP regulations, our basil offers a delicate aroma, tender leaves, and the authentic taste of Ligurian tradition.",
-        image: "/images/im2.jpg",
-      },
       {
         name: "Fresh Fennel",
         description:

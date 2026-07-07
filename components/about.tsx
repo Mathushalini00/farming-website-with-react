@@ -2,7 +2,7 @@
 
 import { FiCheck, FiAward, FiHeart, FiUsers } from "react-icons/fi";
 import Image from "next/image";
-import AboutUs from "../public/images/about.jpeg";
+import AboutUs from "../public/images/23.jpeg";
 import { useLanguage } from "./language-provider";
 import { aboutContent } from "./i18n";
 
