@@ -19,11 +19,11 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="relative group">
-            <div className="aspect-square rounded-2xl bg-muted overflow-hidden shadow-2xl">
+            <div className="group aspect-square rounded-2xl bg-muted overflow-hidden shadow-2xl">
               <Image
                 src={AboutUs}
                 alt="La nostra eredità"
-                className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.2] transition-transform duration-700"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-full w-32 h-32 flex flex-col items-center justify-center text-center shadow-xl border-4 border-background">
