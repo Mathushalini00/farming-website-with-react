@@ -50,7 +50,7 @@ export function Navbar() {
               {language === "it" ? "EN" : "IT"}
             </button>
 
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 ml-2 rounded-full bg-card/70 hover:bg-muted/60 transition-colors border border-border/30"
               aria-label="Toggle theme"
@@ -60,7 +60,7 @@ export function Navbar() {
               ) : (
                 <FiSun className="w-5 h-5 text-primary" />
               )}
-            </button>
+            </button> */}
           </div>
 
           <div className="flex items-center gap-3 md:hidden">
