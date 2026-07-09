@@ -13,7 +13,7 @@ export function Gallery() {
     { url: "/images/im18.jpeg", alt: "Banco del mercato agricolo" },
     { url: "/images/im17.jpeg", alt: "Banco del mercato agricolo" },
     { url: "/images/im20.jpeg", alt: "Campi coltivati" },
-    { url: "/images/im4.jpg", alt: "Campi coltivati" },
+    { url: "/images/25.jpeg", alt: "Campi coltivati" },
     { url: "/images/im9.jpg", alt: "Campi coltivati" },
     { url: "/images/24.jpeg", alt: "Campi coltivati" },
   ];
